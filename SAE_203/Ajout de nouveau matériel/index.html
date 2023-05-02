@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="styles.css">
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+   <title>Document</title>
+</head>
+
+<body>
+   <div class="shape__smll"> </div>
+   <div class="shape__big_1"> </div>
+   <div class="shape__big_2"> </div>
+
+   <section id="all-add-mat">
+      <div id="div-gauche">
+         <div>
+            <p>Ajouter un matériel</p>
+         </div>
+         <div class="div-perssonage">
+            <img src="ressources/plus-dynamic-gradient.png" alt="">
+         </div>
+         <div class="iut-logo">
+            <img src="ressources/iut-logo.png" alt="">
+         </div>
+      </div>
+
+      <section class="forms-add-mat">
+         <div>
+            <h1 class="titre">Ajouter un matériel</h1>
+
+            <form>
+
+               <div class="div-add-mat">
+
+
+                  <div class="div-droite-add-mat">
+                     <div class="label marge">
+                        <label for="nom">Nom :</label>
+                        <input type="text" class="input input-add-mat" name="nom">
+                     </div>
+
+
+
+                     <div class="label marge">
+                        <label for="reference">Référence :</label>
+                        <input type="text" class="input input-add-mat" name="reference">
+                     </div>
+
+
+                     <div class="label marge">
+                        <label for="menu-deroulant">Type de matériel :</label>
+                        <select id="menu-deroulant">
+                           <option class="option-select" value="option1">Type</option>
+                           <option class="option-select" value="option2">Option 2</option>
+                           <option class="option-select" value="option3">Option 3</option>
+                        </select>
+                     </div>
+                  </div>
+
+
+
+                  <div class="label div-gauche-add-mat">
+                     <label for="description">Description :</label>
+                     <textarea class="input txt-area" name="description" rows="8"></textarea>
+                  </div>
+               </div>
+
+               <div class="label img-select">
+                  <label for="image-input">Sélectionner une nouvelle image :</label>
+                  <input type="file" id="image-input" name="image">
+              </div>
+
+               <div class="btn-mat">
+                  <button class="btn-modifier" type="submit"><i class="icone-btn-mat ri-pencil-fill"></i>Modifier </button>
+                  <button class="btn-retour" type="submit"><i class="icone-btn-mat ri-arrow-left-line"></i>Retour </button>
+               </div>
+            </form>
+         </div>
+      </section>
+   </section>
+
+
+   <script>
+      function toggleDropdown() {
+         document.getElementById('dropdown-menu').classList.toggle('dropdown-menu1')
+      }
+
+
+   </script>
+   <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+</body>
+
+</html>
