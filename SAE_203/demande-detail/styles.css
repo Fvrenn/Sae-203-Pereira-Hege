@@ -34,26 +34,20 @@ h4 {
 }
 .navbar{
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+    flex-direction: row-reverse;
     align-items: center;
     margin: 30px 50px;
 }
-.navbar ul{
-    display: flex;
-    
-}
-.navbar li {
-    
-    font-weight: 600;
-    font-size: 20px;
-    color: #FFFFFF;
-    margin-right: 30px;
-}
+
 .div-user-card{
     max-width: 600px;
     display: flex;
     align-items: center;
+    flex-direction: row-reverse;
 }
+
+
 .user-card {
     display: flex;
     align-items: center;
@@ -61,6 +55,7 @@ h4 {
     border: 2px solid #303241;
     border-radius: 18px;
     padding: 10px 22px;
+    
 }
 
 .user-card img{
@@ -82,9 +77,6 @@ h4 {
     margin-left: 3px;
 }
 
-
-
-
 #dropdown-menu{
     position: absolute;
     top: 100px;
@@ -104,8 +96,8 @@ h4 {
     cursor: pointer;
 }
 .dropdown-menu1{
-    min-height: 100px !important;
-    padding: 10px 22px !important;
+    min-height: 90px !important;
+    padding: 10px 15px !important;
     border: 2px solid #303241 !important;
 }
 
@@ -138,33 +130,46 @@ h4 {
 .div-tabs {
     margin: auto ;
     width: 1361px;
-    height: 770px;
-    left: 280px;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    padding: 50px 0px;
+    /* left: 280px; */
     background: #181A25;
     border-radius: 53px;    
-    margin-top: 10px;
-    align-items: center;
+    flex-direction: column;
+    /* align-items: center; */
 
-
-}
-
+}/*
+.espace{
+    /*margin-bottom: 100px  ;
+}*/
 table {
     /* width: 70%; */
     border-collapse: collapse;
-    margin: auto;
-    
+    /* margin: auto; */
+
+
+}
+.logo_iut{
+    width: 200px;
+}
+.espace-table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .ligne-nom th{
     width: 150px;
     text-align: left;
     padding-left: 6px;
+    padding-bottom: 8px;
 }
 
 
 td {
-    
     border: 1px solid #303241;
-    padding: 3px 8px;
+    padding: 8px 8px;
     text-align: left;
     font-family: 'Poppins';
     font-weight: 400;
@@ -173,6 +178,7 @@ td {
 }
 
 th {
+
     font-weight: bold;
 
 }
@@ -194,7 +200,12 @@ th {
     gap: 8px;
     /* align-items: center; */
 }
-
+.titre-liste{
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFFFFF;
+    margin-right: 25px;
+}
 .button-container button {
     cursor: pointer;
     border: none;
@@ -210,7 +221,22 @@ th {
     display: flex;
     align-items: center;
 }
-
+.retour-button {
+    color: #0086fc;  
+    background: rgba(51, 122, 183, 0.3);
+    padding: 7px; 
+    
+    border-radius: 4px;
+    /* display: flex; */
+    align-items: center;
+    font-size: 15px;
+    /* width: 100%; */
+}
+.btn-retour{
+    display: flex;
+    margin-left: 140px;
+    margin-bottom: 20px;
+}
 .delete-button {
     padding: 7px;
     color: #FF5B6D;

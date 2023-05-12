@@ -4,9 +4,10 @@ session_start();/*
 if(session_status() !== PHP_SESSION_ACTIVE){
    header('Location: ../connexion/index.php');
 }*/
-if(!empty($_SESSION['user']) || !empty($_SESSION['admin'])){
+if (!empty($_SESSION['user']) || !empty($_SESSION['admin'])) {
 ?>
-<html lang="en">
+   <html lang="en">
+
    <head>
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,19 +20,24 @@ if(!empty($_SESSION['user']) || !empty($_SESSION['admin'])){
    <body>
       <header>
          <div class="shape__smll"> </div>
-        <div class="shape__big_1"> </div>
-        <div class="shape__big_2"> </div>
+         <div class="shape__big_1"> </div>
+         <div class="shape__big_2"> </div>
          <nav class="navbar">
-            <ul>
-               <li><a href="">Matériels</a></li>
-               <li><a href="../demande-detail/index.php">Réservations</a></li>
-            </ul>
+   
+       <div class="space">
             <div class="div-user-card">
                <div class="user-card">
-                  <?php if(!empty($_SESSION['user'])){echo'<h1>'.$_SESSION['user'].'</h1>';} if(!empty($_SESSION['admin'])){echo'<h1>'.$_SESSION['admin'].'</h1>';} ?>
+                  <?php if (!empty($_SESSION['user'])) {
+                     echo '<h1>' . $_SESSION['user'] . '</h1>';
+                  }
+                  if (!empty($_SESSION['admin'])) {
+                     echo '<h1>' . $_SESSION['admin'] . '</h1>';
+                  } ?>
+                  
                   <img src="ressources/default_person.jpg" alt="">
                   <div class="dropdown">
                      <i class="ri-arrow-down-s-line" onclick="toggleDropdown()"></i>
+                     
                      <div id="dropdown-menu">
                         <a href="" class="Profil">Profil</a>
                         <a href="../deco.php" class="btn-dropdown-logout">
@@ -41,114 +47,125 @@ if(!empty($_SESSION['user']) || !empty($_SESSION['admin'])){
                      </div>
                   </div>
                </div>
+            </div>      
+            <ul>
+               <li><a href="../liste-du-matériel/index.php">Matériels</a></li>
+               <li><a href="../demande-detail/index.php">Réservations</a></li>
+            </ul>   
+          </div>
+             <div class="logo-iut">
+               <a href="../page-principale/index.php"><img class="logo_iut" src="../connexion/ressources/iut-logo" alt=""></a>
             </div>
+   
+            
+
          </nav>
          <div class="container-header">
             <div class="container-txt-btn">
                <p class="p-page-princial">Réserver votre matériel de l' I.U.T Gustave Eiffel en temps réel</p>
                <a class="btn" href="../demande_de_reservation/index.php">Réserver</a>
-             
+
             </div>
             <div class="containenr-3dimg">
                <img class="vid-camera-3d" src="ressources/video-camera-dynamic-color.png" alt="">
                <img class="camera-3d" src="ressources/camera-dynamic-color.png" alt="">
                <img class="calendar-3d" src="ressources/calender-dynamic-color.png" alt="">
             </div>
-         </div> 
+         </div>
       </header>
 
       <section id="grid">
          <h4>Matériel :</h4>
          <div class="gallery">
-            
+
             <article>
                <div class="shopping-card">
                   <img src="ressources/74-202_01.jpg" alt="Product Name" />
                   <h3 class="title-card">Microphone</h3>
                   <div class="buttons">
-                    <button class="button-left">Bouton 1</button>
-                    <button class="button-right">Réserver</button>
+                     <button class="button-left">Bouton 1</button>
+                     <button class="button-right">Réserver</button>
                   </div>
                </div>
-              
+
             </article>
 
             <article>
                <div class="shopping-card">
-                  <img src="ressources/camera.jpg" alt="Product Name"/>
-                    <h3 class="title-card">Caméra</h3>
+                  <img src="ressources/camera.jpg" alt="Product Name" />
+                  <h3 class="title-card">Caméra</h3>
                   <div class="buttons">
-                    <button class="button-left">Bouton 1</button>
-                    <button class="button-right">Réserver</button>
+                     <button class="button-left">Bouton 1</button>
+                     <button class="button-right">Réserver</button>
                   </div>
                </div>
-               
+
             </article>
             <article>
                <div class="shopping-card">
-                  <img src="ressources/camera.jpg" alt="Product Name"/>
-                    <h3 class="title-card">Caméra</h3>
+                  <img src="ressources/camera.jpg" alt="Product Name" />
+                  <h3 class="title-card">Caméra</h3>
                   <div class="buttons">
-                    <button class="button-left">Bouton 1</button>
-                    <button class="button-right">Réserver</button>
+                     <button class="button-left">Bouton 1</button>
+                     <button class="button-right">Réserver</button>
                   </div>
                </div>
-               
+
             </article>
             <article>
                <div class="shopping-card">
-                  <img src="ressources/camera.jpg" alt="Product Name"/>
-                    <h3 class="title-card">Caméra</h3>
+                  <img src="ressources/camera.jpg" alt="Product Name" />
+                  <h3 class="title-card">Caméra</h3>
                   <div class="buttons">
-                    <button class="button-left">Bouton 1</button>
-                    <button class="button-right">Réserver</button>
+                     <button class="button-left">Bouton 1</button>
+                     <button class="button-right">Réserver</button>
                   </div>
                </div>
-               
+
             </article>
             <article>
                <div class="shopping-card">
-                  <img src="ressources/camera.jpg" alt="Product Name"/>
-                    <h3 class="title-card">Caméra</h3>
+                  <img src="ressources/camera.jpg" alt="Product Name" />
+                  <h3 class="title-card">Caméra</h3>
                   <div class="buttons">
-                    <button class="button-left">Bouton 1</button>
-                    <button class="button-right">Réserver</button>
+                     <button class="button-left">Bouton 1</button>
+                     <button class="button-right">Réserver</button>
                   </div>
                </div>
-               
+
             </article>
             <article>
                <div class="shopping-card">
-                  <img src="ressources/camera.jpg" alt="Product Name"/>
-                    <h3 class="title-card">Caméra</h3>
+                  <img src="ressources/camera.jpg" alt="Product Name" />
+                  <h3 class="title-card">Caméra</h3>
                   <div class="buttons">
-                    <button class="button-left">Bouton 1</button>
-                    <button class="button-right">Réserver</button>
+                     <button class="button-left">Bouton 1</button>
+                     <button class="button-right">Réserver</button>
                   </div>
                </div>
-               
+
             </article>
             <article>
                <div class="shopping-card">
-                  <img src="ressources/camera.jpg" alt="Product Name"/>
-                    <h3 class="title-card">Caméra</h3>
+                  <img src="ressources/camera.jpg" alt="Product Name" />
+                  <h3 class="title-card">Caméra</h3>
                   <div class="buttons">
-                    <button class="button-left">Bouton 1</button>
-                    <button class="button-right">Réserver</button>
+                     <button class="button-left">Bouton 1</button>
+                     <button class="button-right">Réserver</button>
                   </div>
                </div>
-               
+
             </article>
             <article>
                <div class="shopping-card">
-                  <img src="ressources/camera.jpg" alt="Product Name"/>
-                    <h3 class="title-card">Caméra</h3>
+                  <img src="ressources/camera.jpg" alt="Product Name" />
+                  <h3 class="title-card">Caméra</h3>
                   <div class="buttons">
-                    <button class="button-left">Bouton 1</button>
-                    <button class="button-right">Réserver</button>
+                     <button class="button-left">Bouton 1</button>
+                     <button class="button-right">Réserver</button>
                   </div>
                </div>
-               
+
             </article>
          </div>
       </section>
@@ -160,9 +177,10 @@ if(!empty($_SESSION['user']) || !empty($_SESSION['admin'])){
       <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
    </body>
 
-   <?php
-}else{
+<?php
+} else {
    header('Location: ../connexion/index.php');
 }
 ?>
-</html>
+
+   </html>

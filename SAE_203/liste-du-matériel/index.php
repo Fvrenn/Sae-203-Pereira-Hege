@@ -44,7 +44,7 @@ if (!empty($_SESSION['user']) || !empty($_SESSION['admin'])) {
 
 
             <div class="logo-iut">
-               <a href="../page-principale/index.php"><img class="logo_iut" src="../connexion/ressources/iut-logo" alt=""></a>
+               <a href="../page-principale/index.php"><img class="logo_iut"  src="../connexion/ressources/iut-logo" alt=""></a>
             </div>
          </nav>
       </header>
@@ -53,79 +53,83 @@ if (!empty($_SESSION['user']) || !empty($_SESSION['admin'])) {
       <div class="shape__big_2"> </div>*/
       <section class="div-tabs">
          <div class="btn-retour">
-            <h2 class="titre-liste">Liste détaillée des réservations </h2>
+            <h2 class="titre-liste">Liste du matériel </h2>  
             <a class="retour-button" href="../page-principale/index.php"><i class="ri-arrow-left-line"></i> Retour</a>
+           <?php if (!empty($_SESSION['admin'])) {
+           echo '<a class="add-button" href="../Ajout_de_nouveau_matériel/index.php"><i class="ri-add-line"></i> Ajouter</a>';
+           }?>
+            
          </div>
          <div class="espace-table">
-            <table>
+         <table>
                <tr class="ligne-nom">
                   <th>Nom</th>
-                  <th>Matériel souhaité</th>
-                  <th>Date de début</th>
-                  <th>Date de fin</th>
+                  <th>Description</th>
+                  <th>Référence</th>
                   <th>Type</th>
-                  <th>Statuts</th>
                   <th></th>
                </tr>
-               <?php
+               <tr class="ligne">
+                       <td></td>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+               </tr>
+               <?php /*
                include "../table.php";
-               $results = table("SELECT demande.id_demande, utilisateur.nom as nom_utilisateur, utilisateur.prenom, matériel.nom as nom_matériel, demande.date_de_debut, demande.date_de_fin, matériel.type, demande.statuts 
-                                 FROM utilisateur, demande, matériel 
-                                 WHERE demande.id_user = utilisateur.id_user 
-                                 AND demande.idmat = matériel.idmat 
-                                 ORDER BY demande.id_demande DESC;");
+               $results = table("SELECT demande.id_demande, utilisateur.nom as nom_utilisateur, utilisateur.prenom, matériel.nom as nom_matériel, demande.date_de_debut, demande.date_de_fin, matériel.type, demande.statuts FROM utilisateur, demande, matériel WHERE demande.id_user = utilisateur.id_user AND demande.idmat = matériel.idmat;");
                if ($results->rowCount() > 0) {
                   while ($row = $results->fetchAll(PDO::FETCH_ASSOC)) {
                      foreach ($row as $value) {
+
                         echo '<tr class="ligne">';
-                        echo '<td>' . $value['nom_utilisateur'] . ' ' . $value['prenom'] . '</td>';
-                        echo '<td>' . $value['nom_matériel'] . '</td>';
-                        echo '<td>' . $value['date_de_debut'] . '</td>';
-                        echo '<td>' . $value['date_de_fin'] . '</td>';
+                        echo '<td>' . $value['nom'] .'</td>';
+                        echo '<td>' . $value['description'] . '</td>';
+                        echo '<td>' . $value['reference'] . '</td>';
                         echo '<td>' . $value['type'] . '</td>';
-                        echo '<td>' . $value['statuts'] . '</td>';
                         if (!empty($_SESSION['admin'])) {
                            if ($value['statuts'] !== 'demande acceptée' && $value['statuts'] !== 'demande refusée') {
                               echo '<td class>';
                ?>
                               <form action="index.php" method="POST">
                                  <div class="button-container">
-                                    <button class="accept-button" name="accepter" value="<?php echo $value['id_demande']; ?>"><i class="icone ri-check-fill"></i>Accepter</button>
-                                    <button class="delete-button" name="refuser" value="<?php echo $value['id_demande']; ?>"><i class=" icone ri-close-line"></i>Refuser</button>
+                                    <button class="modif-button" name="modifier" value="<?php echo $value['id_demande']; ?>"><i class="ri-pencil-fill"></i>Modifier</button>
+                                    <button class="delete-button" name="suprimer" value="<?php echo $value['id_demande']; ?>"><i class=" icone ri-close-line"></i>Suprimer</button>
                                  </div>
                               </form>
-               <?php
-                              echo '</td>';
+                  <?php
+                                 echo '</td>';
+                              }
                            }
-                        }
-                        echo '</tr>';
+                           echo '</tr>';
+                  
 
-
-                        if (!empty($_POST['accepter'])) {
-                           $results = table(
-                              "UPDATE demande SET statuts = 'demande acceptée' WHERE id_demande = :id;",
-                              [
-                                 'id' => $_POST['accepter']
-                              ]
-                           );
-                           header('Location: index.php');
-                        }
-
-                        if (!empty($_POST['refuser'])) {
-                           $results = table(
-                              "UPDATE demande SET statuts = 'demande refusée' WHERE id_demande = :id;",
-                              [
-                                 'id' => $_POST['refuser']
-                              ]
-                           );
-                           header('Location: index.php');
-                        }
+                     if (!empty($_POST['accepter'])) {
+                        $results = table(
+                           "UPDATE demande SET statuts = 'demande acceptée' WHERE id_demande = :id;",
+                           [
+                              'id' => $_POST['accepter']
+                           ]
+                        );
+                        header('Location: index.php');
+                     } 
+                      
+                     if (!empty($_POST['refuser'])) { 
+                        $results = table(
+                           "UPDATE demande SET statuts = 'demande refusée' WHERE id_demande = :id;",
+                           [
+                              'id' => $_POST['refuser']
+                           ]
+                        );
+                        header('Location: index.php');
+                        
                      }
                   }
                }
-               ?>
-            </table>
-         </div>
+                  }*/
+                  ?>
+               </table>
+            </div>
          </div>
       </section>
    <?php
