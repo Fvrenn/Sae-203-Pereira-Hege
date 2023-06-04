@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+body {
+  background-color: #0b0722;
+  /* overflow: hidden; */
+  overflow-x: hidden;
+  font-family: "Poppins";
+}
+
+a {
+  color: #ffffff;
+}
+
+h4 {
+  /* margin-left: 200px; */
+  font-weight: 600;
+  font-size: 53px;
+  color: #ffffff;
+  margin: 100px auto 0;
+  /* padding: 0 50px; */
+  max-width: 1300px;
+}
+
+/* gauche   */
+#div-gauche {
+  padding: 40px;
+  /* width: 817px; */
+  /* height: 93vh; */
+  background: rgba(77, 77, 77, 0.24);
+  border-radius: 56px;
+  text-align: center;
+  margin: 29px 29px 29px 0px;
+  /* float: right; */
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+#div-gauche p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 39px;
+  text-align: center;
+  color: #ffffff;
+  padding: 0 100px;
+  margin-bottom: 70px;
+}
+
+#all {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.img-calender {
+  width: 400px;
+}
+.img-droit {
+  border-radius: 25px;
+  width: 460px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  height: 350px;
+  object-fit: cover;
+}
+.iut-logo {
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+.iut-logo img {
+  width: 281px;
+}
+
+/* forms */
+.forms {
+  width: 527px;
+  height: 425px;
+  border: 1px solid #f89b29;
+  background: #272039;
+  border-radius: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 250px;
+}
+.div-date {
+  display: flex;
+}
+
+#marge-date {
+  margin-right: 20px;
+}
+.forms h1 {
+  font-weight: 600;
+  font-size: 35px;
+  color: #ffffff;
+}
+.submit {
+  cursor: pointer;
+}
+.forms .submit {
+  padding: 10px 45px;
+  background: linear-gradient(90.03deg, #ff0f7b 0.02%, #f89b29 99.98%);
+  border-radius: 4px;
+  border: none;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 25px;
+}
+.marge {
+  margin-top: 10px;
+}
+.titre {
+  margin-bottom: 20px;
+}
+.label {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 500;
+  font-size: 14px;
+  color: #666873;
+}
+
+#menu-deroulant {
+  background: rgba(23, 24, 34, 0.4);
+  border: 1px solid #303241;
+  border-radius: 7px;
+  color: #71a8fe;
+  width: 213px;
+  height: 32px;
+  padding-left: 8px;
+}
+
+#menu-deroulant option {
+  background: rgb(23, 24, 34);
+  color: #71a8fe;
+}
+
+.date {
+  background: rgba(23, 24, 34, 0.4);
+  border: 1px solid #303241;
+  border-radius: 7px;
+  color: #71a8fe;
+  padding-left: 8px;
+  height: 32px;
+  width: 123px;
+}
+
+.date::-webkit-calendar-picker-indicator {
+  background-image: url("ressources/calendar-line.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.shape__smll {
+  width: 327px;
+  height: 327px;
+  left: 1327px;
+  top: 752px;
+  background: rgba(255, 0, 21, 0.48);
+  filter: blur(250px);
+  position: absolute;
+  z-index: -100;
+}
+
+.shape__big_1 {
+  position: absolute;
+  width: 603px;
+  height: 603px;
+  left: -235px;
+  top: 400px;
+  background: rgba(248, 155, 41, 0.29);
+  filter: blur(250px);
+  z-index: -101;
+}
+
+.shape__big_2 {
+  position: absolute;
+  width: 603px;
+  height: 603px;
+  left: 1618px;
+  top: 108px;
+  background: rgba(255, 0, 115, 0.17);
+  filter: blur(250px);
+  z-index: -102;
+}
+
+.erreur_materiel,
+.erreur_date_debut,
+.erreur_date_fin,
+.erreur_glo {
+  font-family: "Poppins";
+  font-weight: 300;
+  font-size: 12px;
+  color: #ff4500;
+  margin-top: 7px;
+  margin-right: 11px;
+}
+
+.div-perssonage, .iut-logo{
+  z-index: -100;
+  position: relative;
+}
+.div-alert {
+  position: absolute;
+}
+
+.bg-red {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #353642;
+  opacity: 0.9;
+  z-index: 1; 
+}
+
+a {
+  text-decoration: none;
+}
+
+.card-alert {
+  width: 559px;
+  /* height: 358px; */
+  background-color: #181a25;
+  border-radius: 53px;
+  padding-top: 37px;
+  padding-bottom: 44px;
+  z-index: 101;
+  position: relative;
+}
+
+
+
+
+.p-alert {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 36px;
+}
+
+.h1-card {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 29px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.btn-alert {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 15px;
+  color: #22d49f;
+  background: rgba(34, 212, 159, 0.3);
+  border-radius: 4px;
+  padding: 11px 59px;
+}
+
+.content-alert {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  justify-content: space-between;
+  z-index: 10;
+  position: relative;
+}
+
+.container-alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper {
+  /* height: 100vh;  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #eee; */
+  margin-bottom: 27px;
+}
+
+.checkmarkcircle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #7ac142;
+  fill: none;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  margin: 10% auto;
+  box-shadow: inset 0px 0px 0px #7ac142;
+  animation: fill 0.4s ease-in-out 0.4s forwards,
+    scale 0.3s ease-in-out 0.9s both;
+}
+
+.checkmarkcheck {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes scale {
+  0%,
+  100% {
+    transform: none;
+  }
+
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px #7ac142;
+  }
+}
